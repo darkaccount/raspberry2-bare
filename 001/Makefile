@@ -1,8 +1,7 @@
 
 ARMGNU ?= arm-none-eabi
-COPS = -Wall -O0 -nostdlib -nostartfiles -ffreestanding 
+COPS = -Wall -O0 -DPRI2 -nostdlib -nostartfiles -ffreestanding 
 OCOPS = -O0 -DRPI2 -mfpu=neon-vfpv4 -mfloat-abi=hard -march=armv7-a -mtune=cortex-a7 -nostartfiles -g 
-LLCOPS =  -mfpu=neon-vfpv4 -mfloat-abi=hard -march=armv7-a -mtune=cortex-a7 
 
 all : kernel.elf kernel.img 
 
